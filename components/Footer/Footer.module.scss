@@ -1,0 +1,73 @@
+.footer {
+  margin-top: auto;
+  background: var(--background);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logo {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1.25rem;
+
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.copy {
+  font-size: 0.8125rem;
+  color: #000000;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+  opacity: 0.85;
+}
+
+.socialLink:hover .icon {
+  opacity: 1;
+}
+
+.bar {
+  height: 4px;
+  background-color: var(--color-primary);
+}

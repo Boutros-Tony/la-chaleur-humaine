@@ -1,0 +1,49 @@
+.page {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #eee;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.content {
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  line-height: 1.6;
+  color: var(--foreground);
+}

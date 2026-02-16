@@ -1,0 +1,26 @@
+.card {
+  display: block;
+  color: inherit;
+
+  &:hover .title {
+    color: var(--color-primary);
+  }
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #eee;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
