@@ -6,23 +6,16 @@
   background-repeat: no-repeat;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-}
-
 .container {
   position: relative;
   z-index: 1;
-  padding-top: 3rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
 }
 
 .title {
   color: #fff;
-  margin: 0 0 1rem;
+  margin: 0 0 5rem;
 }
 
 .filtersWrap {
@@ -41,14 +34,18 @@
 .filterBtn {
   padding: 0.5rem 1rem;
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 700;
   border: none;
-  border-radius: 9999px;
+  border-radius: 10px;
+  border: 1px solid var(--color-secondary);
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  transition: background 0.2s, color 0.2s;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  transition:
+    background 0.2s,
+    color 0.2s;
 
   &:hover {
     background: rgba(255, 255, 255, 0.4);
@@ -189,7 +186,7 @@
 .cardImageWrap {
   position: relative;
   aspect-ratio: 1 / 1;
-  background: #e8e8e8;
+
   overflow: hidden;
   border-radius: 16px;
 }

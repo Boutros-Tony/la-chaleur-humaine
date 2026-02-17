@@ -1,26 +1,36 @@
 .card {
   display: block;
   color: inherit;
-
-  &:hover .title {
-    color: var(--color-primary);
-  }
+  text-decoration: none;
 }
 
 .imageWrap {
   position: relative;
-  aspect-ratio: 4 / 3;
-  background: #eee;
-  overflow: hidden;
+  aspect-ratio: 1 / 1;
+
+  overflow: visible;
 }
 
 .image {
   object-fit: cover;
 }
 
+// Title overlaid on image, bottom-left (image has its own border radius; we don't clip)
 .title {
-  margin-top: 0.75rem;
-  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: color 0.2s;
+}
+
+.card:hover .title {
+  color: #fff;
+  opacity: 0.95;
 }

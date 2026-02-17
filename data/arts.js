@@ -1,49 +1,76 @@
+const LOREM =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
 export const arts = [
   {
-    slug: "œuvre-1",
+    slug: "oeuvre-1",
     title: "Œuvre 1",
     description: "Première œuvre – description.",
-    image: "/assets/art-1.png", // replace with /arts/œuvre-1.jpg when you add real art
+    image: "/assets/art-1.png",
+    image2: "/assets/art-1.png",
+    image3: "/assets/art-1.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "painting",
     year: "2024",
   },
   {
-    slug: "œuvre-2",
+    slug: "oeuvre-2",
     title: "Œuvre 2",
     description: "Deuxième œuvre – description.",
-    image: "/assets/art-2.png", // replace with /arts/œuvre-2.jpg when you add real art
+    image: "/assets/art-2.png",
+    image2: "/assets/art-2.png",
+    image3: "/assets/art-2.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "textile",
     year: "2024",
   },
   {
-    slug: "œuvre-3",
+    slug: "oeuvre-3",
     title: "Œuvre 3",
     description: "Troisième œuvre – description.",
-    image: "/assets/art-3.png", // replace with /arts/œuvre-3.jpg when you add real art
+    image: "/assets/art-3.png",
+    image2: "/assets/art-3.png",
+    image3: "/assets/art-3.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "painting",
     year: "2024",
   },
   {
-    slug: "œuvre-4",
+    slug: "oeuvre-4",
     title: "Œuvre 4",
     description: "Première œuvre – description.",
-    image: "/assets/art-1.png", // replace with /arts/œuvre-1.jpg when you add real art
+    image: "/assets/art-1.png",
+    image2: "/assets/art-1.png",
+    image3: "/assets/art-1.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "painting",
     year: "2024",
   },
   {
-    slug: "œuvre-5",
+    slug: "oeuvre-5",
     title: "Œuvre 5",
     description: "Deuxième œuvre – description.",
-    image: "/assets/art-2.png", // replace with /arts/œuvre-2.jpg when you add real art
+    image: "/assets/art-2.png",
+    image2: "/assets/art-2.png",
+    image3: "/assets/art-2.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "textile",
     year: "2024",
   },
   {
-    slug: "œuvre-6",
+    slug: "oeuvre-6",
     title: "Œuvre 6",
     description: "Troisième œuvre – description.",
-    image: "/assets/art-3.png", // replace with /arts/œuvre-3.jpg when you add real art
+    image: "/assets/art-3.png",
+    image2: "/assets/art-3.png",
+    image3: "/assets/art-3.png",
+    bodyText: LOREM,
+    bodyText2: LOREM,
     category: "painting",
     year: "2024",
   },

@@ -1,49 +1,198 @@
 .page {
-  padding: 2rem 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
+  min-height: 100%;
+  background-color: var(--color-tertiary);
 }
 
-.back {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+// Header: same as art listing
+.hero {
+  position: relative;
+  background-image: url("/assets/the-art-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 220px;
+  padding-bottom: 2.5rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.heroTitle {
+  color: #fff;
+  margin: 0;
+}
+
+// GO BACK on edge of hero bottom (half in, half out), slightly down so centered on border
+.goBackHeroWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateY(50%);
+}
+
+.goBackHeroWrap .heroContainer {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+// GO BACK button: arrow-shaped left edge + text, secondary color
+.goBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem 0.55rem 1.5rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--color-primary);
+  background-color: var(--color-secondary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%);
 
   &:hover {
-    text-decoration: underline;
+    opacity: 0.92;
   }
 }
 
-.article {
+.goBackArrow {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.imageWrap {
+// Content sections: tertiary bg
+.contentSection {
+  background-color: var(--color-tertiary);
+  margin-bottom: 4rem;
+}
+
+.mainSection {
+  padding-top: 8rem;
+  padding-bottom: 2.5rem;
+}
+
+.artTitle {
+  color: var(--color-primary);
+  margin: 0 0 1.5rem;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mainText {
+  .body-copy {
+    margin: 0;
+  }
+}
+
+.mainImageWrap {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: #eee;
+  background: #e8e8e8;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.image {
-  object-fit: contain;
+.artImage {
+  object-fit: cover;
 }
 
-.content {
-  padding-bottom: 2rem;
+// Secondary section
+.secondarySection {
+  padding-top: 0;
+  padding-bottom: 3rem;
 }
 
-.title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+.secondaryLayout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
 }
 
-.description {
-  line-height: 1.6;
-  color: var(--foreground);
+.secondaryImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  width: 280px;
+  min-width: 280px;
+  height: 100%;
+  min-height: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    grid-template-rows: auto;
+  }
+}
+
+.smallImageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: #e8e8e8;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  @media (max-width: 768px) {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.secondaryParagraph {
+  margin-bottom: 4rem !important;
+}
+
+.secondaryText {
+  .button {
+    margin: 0;
+  }
+}
+
+// Bottom GO BACK: left edge of container, not centered
+.bottomGoBackWrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem 0 3rem;
+  background-color: var(--color-tertiary);
+}
+
+.bottomGoBackWrap .goBack {
+  clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%);
 }

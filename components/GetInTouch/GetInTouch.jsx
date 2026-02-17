@@ -15,7 +15,7 @@ const CONTACT = [
 
 export default function GetInTouch() {
   return (
-    <section className={styles.section} aria-labelledby="get-in-touch-title">
+    <section id="get-in-touch" className={styles.section} aria-labelledby="get-in-touch-title">
       <div className={styles.overlay} />
       <Container variant="content" className={styles.layout}>
         <div className={styles.left}>

@@ -1,18 +1,130 @@
 .page {
-  padding: 2rem 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  min-height: 100%;
 }
 
-.title {
-  font-size: 2rem;
+// Hero with background image
+.hero {
+  position: relative;
+  background-image: url("/assets/the-art-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;
+  padding-bottom: 2rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.heroTitle {
+  color: #fff;
+  margin: 0;
+}
+
+// Filters on the bottom edge of hero (half in, half out)
+.filtersWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  transform: translateY(50%);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  padding: 0.5rem 1rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
   font-weight: 700;
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--color-tertiary);
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.filterBtnActive {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    opacity: 0.95;
+  }
+}
+
+// Content section (paragraph + grid)
+.contentSection {
+  background-color: var(--color-tertiary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contentContainer .body-copy {
+  margin: 0;
+  margin-top: 1.5rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+.loadMoreWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.loadMoreBtn {
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }

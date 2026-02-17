@@ -1,14 +1,27 @@
 .section {
   background-color: var(--color-tertiary);
+  position: relative;
 }
-
+.svgFlower {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 15%;
+}
+.svgFlowerSecond {
+  position: absolute;
+  bottom: -10%;
+  left: 0%;
+  z-index: 2;
+  width: 40%;
+}
 .layout {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 2.5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -38,6 +51,7 @@
   border-radius: 12px;
   overflow: hidden;
   line-height: 0;
+  z-index: 4;
 }
 
 .image {
@@ -45,6 +59,7 @@
   height: auto;
   display: block;
   vertical-align: middle;
+  z-index: 4;
 }
 
 .right {

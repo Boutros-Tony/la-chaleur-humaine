@@ -13,8 +13,8 @@ export default function ArtCard({ slug, title, image }) {
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
           className={styles.image}
         />
+        <span className={styles.title}>{title}</span>
       </div>
-      <h3 className={styles.title}>{title}</h3>
     </Link>
   );
 }
