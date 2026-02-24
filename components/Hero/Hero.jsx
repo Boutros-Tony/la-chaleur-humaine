@@ -123,7 +123,7 @@ export default function Hero() {
             animate={slideUp.animate}
             transition={{ ...slideUp.transition, delay: 0.5 }}
           >
-            <Button href="/art" variant="primary">
+            <Button href="/#the-art" variant="primary">
               Check the art!
             </Button>
             <Button href="/#get-in-touch" variant="secondary">

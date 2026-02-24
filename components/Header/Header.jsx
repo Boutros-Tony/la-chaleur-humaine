@@ -8,7 +8,7 @@ import styles from "./Header.module.scss";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/art", label: "The Art" },
+  { href: "/#the-art", label: "The Art" },
   { href: "/#the-artist", label: "The Artist" },
   { href: "/#get-in-touch", label: "Get in touch" },
 ];
@@ -51,7 +51,7 @@ export default function Header() {
           }
           updateActive();
         },
-        { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] }
+        { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
       );
 
       observer.observe(el);
@@ -63,9 +63,12 @@ export default function Header() {
 
   const isActive = (href) => {
     if (href === "/") return pathname === "/" && !inViewSection;
-    if (href === "/art") return pathname === "/art" || pathname.startsWith("/art/");
-    if (href === "/#the-artist") return pathname === "/" && inViewSection === "the-artist";
-    if (href === "/#get-in-touch") return pathname === "/" && inViewSection === "get-in-touch";
+    if (href === "/art")
+      return pathname === "/art" || pathname.startsWith("/art/");
+    if (href === "/#the-artist")
+      return pathname === "/" && inViewSection === "the-artist";
+    if (href === "/#get-in-touch")
+      return pathname === "/" && inViewSection === "get-in-touch";
     return pathname === href || pathname.startsWith(href + "/");
   };
 

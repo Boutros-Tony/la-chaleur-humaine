@@ -41,7 +41,12 @@ export default function TheArt() {
   const [hasNavigated, setHasNavigated] = useState(false);
 
   const filteredArts = useMemo(() => {
-    const list = activeFilter === "all" ? arts : arts.filter((art) => (art.category || "").toLowerCase() === activeFilter);
+    const list =
+      activeFilter === "all"
+        ? arts
+        : arts.filter(
+            (art) => (art.category || "").toLowerCase() === activeFilter,
+          );
     return uniqueBySlug(list);
   }, [activeFilter]);
 
@@ -65,10 +70,18 @@ export default function TheArt() {
     setCurrentSlide(0);
   };
 
-  const slideAnimationClass = hasNavigated ? (slideDirection === "next" ? styles.slideFromNext : styles.slideFromPrev) : "";
+  const slideAnimationClass = hasNavigated
+    ? slideDirection === "next"
+      ? styles.slideFromNext
+      : styles.slideFromPrev
+    : "";
 
   return (
-    <section className={styles.section} aria-labelledby="the-art-title">
+    <section
+      className={styles.section}
+      aria-labelledby="the-art-title"
+      id="the-art"
+    >
       <div className={styles.overlay} />
       <Container variant="content" className={styles.container}>
         <h2 id="the-art-title" className={`section-heading ${styles.title}`}>
@@ -76,14 +89,22 @@ export default function TheArt() {
         </h2>
 
         <div className={styles.filtersWrap}>
-          <div className={styles.filters} role="tablist" aria-label="Filter artworks">
+          <div
+            className={styles.filters}
+            role="tablist"
+            aria-label="Filter artworks"
+          >
             {FILTERS.map(({ id, label }) => (
               <button
                 key={id}
                 type="button"
                 role="tab"
                 aria-selected={activeFilter === id}
-                className={activeFilter === id ? `${styles.filterBtn} ${styles.filterBtnActive}` : styles.filterBtn}
+                className={
+                  activeFilter === id
+                    ? `${styles.filterBtn} ${styles.filterBtnActive}`
+                    : styles.filterBtn
+                }
                 onClick={() => handleFilterChange(id)}
               >
                 {label}
@@ -100,16 +121,31 @@ export default function TheArt() {
               onClick={goPrev}
               aria-label="Previous slide"
             >
-              <Image src="/assets/slider-arrow.svg" alt="" width={22} height={44} className={styles.arrowImg} />
+              <Image
+                src="/assets/slider-arrow.svg"
+                alt=""
+                width={22}
+                height={44}
+                className={styles.arrowImg}
+              />
             </button>
 
             <div className={styles.sliderViewport}>
-              <div key={`${activeFilter}-${currentSlide}`} className={`${styles.slide} ${slideAnimationClass}`}>
+              <div
+                key={`${activeFilter}-${currentSlide}`}
+                className={`${styles.slide} ${slideAnimationClass}`}
+              >
                 {slides.length === 0 ? (
-                  <p className={`body-copy ${styles.empty}`}>No works in this category yet.</p>
+                  <p className={`body-copy ${styles.empty}`}>
+                    No works in this category yet.
+                  </p>
                 ) : (
                   currentSlideArts.map((art) => (
-                    <Link key={art.slug} href={`/art/${art.slug}`} className={styles.card}>
+                    <Link
+                      key={art.slug}
+                      href={`/art/${art.slug}`}
+                      className={styles.card}
+                    >
                       <div className={styles.cardImageWrap}>
                         <Image
                           src={art.image}
@@ -140,7 +176,13 @@ export default function TheArt() {
               onClick={goNext}
               aria-label="Next slide"
             >
-              <Image src="/assets/slider-arrow.svg" alt="" width={22} height={44} className={styles.arrowImgRight} />
+              <Image
+                src="/assets/slider-arrow.svg"
+                alt=""
+                width={22}
+                height={44}
+                className={styles.arrowImgRight}
+              />
             </button>
 
             <div className={styles.ctaWrap}>

@@ -1,5 +1,7 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 99;
   border-bottom: 1px solid rgba(56, 72, 60, 0.15);
   background: var(--color-primary);
 }
@@ -17,6 +19,11 @@
   font-size: 1.125rem;
   color: white;
   letter-spacing: 6px;
+  white-space: nowrap;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
 }
 
 .nav {
