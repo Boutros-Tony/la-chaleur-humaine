@@ -7,39 +7,61 @@
   top: 5%;
   left: 0%;
   width: 15%;
+  @media screen and (max-width: 768px) {
+    width: 25%;
+    left: -5%;
+    top: 1%;
+  }
 }
 .secondFlower {
   position: absolute;
   top: 3%;
   right: 0%;
   width: 15%;
+  z-index: 3;
+  @media screen and (max-width: 768px) {
+    width: 40%;
+    right: -5%;
+    top: auto;
+    bottom: 0%;
+  }
 }
 .layout {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
-
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  position: relative;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
 .content {
-  flex: 1 1 65%;
+  flex: 1 1 55%;
   min-width: 0;
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
 }
 
 .text {
-  font-size: clamp(1.125rem, 2.5vw, 3.375rem);
+  font-size: clamp(1.125rem, 3vw, 3rem);
   line-height: 1.2;
   color: var(--color-primary);
   margin: 0 0 1.75rem;
   font-weight: 500;
   font-family: var(--font-inter), system-ui, sans-serif;
+  @media screen and (max-width: 768px) {
+    font-size: clamp(1rem, 8vw, 8rem);
+  }
 }
 
 .buttons {
@@ -54,18 +76,27 @@
 
 .imageWrap {
   flex: 0 0 auto;
-  width: 360px;
+  width: 50%;
   max-width: 100%;
   border-radius: 0 24px 24px 0;
   overflow: hidden;
   line-height: 0;
-
+  position: absolute;
+  right: -10%;
+  top: 10%;
+  z-index: 2;
+  @media screen and (max-width: 1000px) {
+    right: -5%;
+  }
   @media (max-width: 768px) {
     width: 100%;
-    max-width: 400px;
+    max-width: unset;
     margin: 0 auto;
     border-radius: 12px;
-    order: -1;
+
+    position: relative;
+    right: unset;
+    top: unset;
   }
 }
 

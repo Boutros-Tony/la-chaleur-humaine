@@ -81,11 +81,18 @@
 .contentSection {
   background-color: var(--color-tertiary);
   margin-bottom: 4rem;
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 }
 
 .mainSection {
   padding-top: 8rem;
   padding-bottom: 2.5rem;
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
 }
 
 .artTitle {
@@ -177,6 +184,9 @@
 
 .secondaryParagraph {
   margin-bottom: 4rem !important;
+  @media (max-width: 768px) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .secondaryText {
@@ -191,6 +201,9 @@
   justify-content: flex-start;
   padding: 2rem 0 3rem;
   background-color: var(--color-tertiary);
+  @media (max-width: 768px) {
+    padding: 1rem 0 1rem;
+  }
 }
 
 .bottomGoBackWrap .goBack {

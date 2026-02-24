@@ -11,7 +11,7 @@ const COPY =
 
 export default function TheArtist() {
   return (
-    <section className={styles.section} aria-labelledby="the-artist-title">
+    <section id="the-artist" className={styles.section} aria-labelledby="the-artist-title">
       <svg
         className={styles.svgFlower}
         viewBox="0 0 301 170"

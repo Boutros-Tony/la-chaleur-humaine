@@ -52,7 +52,6 @@ export default function Footer() {
           ))}
         </nav>
       </Container>
-      <div className={styles.bar} />
     </footer>
   );
 }
